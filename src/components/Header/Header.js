@@ -97,7 +97,7 @@ const Header = () => {
         </nav>
 
         {/* Phone number (right, desktop only) */}
-        <div className="hidden md:flex items-center text-white text-lg font-semibold">
+        <div className="hidden md:flex items-center text-black text-lg font-semibold rounded-full py-2 px-4 bg-white">
           <a href="tel:+1234567890" className="hover:text-gray-300 transition-colors">
             +1 (234) 567-890
           </a>

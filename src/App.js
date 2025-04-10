@@ -2,6 +2,7 @@
 import React from 'react';
 import Navbar from './components/Header/Header.js';
 import HeroSection from './components/HeroSection/HeroSection.js';
+import MarqueeSection from './components/MarqueeSection/MarqueeSection.js';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
     >
       <Navbar />
       <HeroSection />
+      <MarqueeSection />
     </div>
   );
 }

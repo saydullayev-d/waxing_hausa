@@ -37,10 +37,24 @@ const HeroSection = () => {
 
         <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl px-4 sm:px-6 h-full">
 
-          <h1 className="hero-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg leading-tight sm:leading-snug md:leading-snug mt-16 sm:mt-20 md:mt-24">
+          <h1 className="hero-text text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg leading-relaxed sm:leading-relaxed md:leading-relaxed mt-16 sm:mt-20 md:mt-24">
             Добро пожаловать в *waxing Hausa - место, где ваше здоровье и благополучие становятся нашим главным приоритетом.
           </h1>
         </div>
+        <div className="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-4 rounded-full backdrop-blur-lg bg-white/10 px-4 py-4">
+        <button
+          className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-xl md:text-2xl hover:bg-gray-200 transition-colors duration-300 shadow-lg"
+          onClick={() => alert("Button 1 clicked!")}
+        >
+          Записаться
+        </button>
+        <button
+          className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-xl md:text-2xl hover:bg-gray-200 transition-colors duration-300 shadow-lg"
+          onClick={() => alert("Button 2 clicked!")}
+        >
+          Узнать больше
+        </button>
+      </div>
       </Element>
     </section>
   );

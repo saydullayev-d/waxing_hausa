@@ -1,0 +1,23 @@
+.marquee {
+    display: flex;
+    width: 200%; /* Double width to allow seamless looping */
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee-text {
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%); /* Moves half the width for seamless looping */
+    }
+  }
+  
+  /* Optional: Pause animation on hover */
+  .marquee:hover {
+    animation-play-state: paused;
+  }
