@@ -30,18 +30,18 @@ const HeroSection = () => {
     <section
       id="container"
       className="hero-section relative h-screen w-full bg-cover bg-center flex flex-col justify-center items-center text-center text-white"
-      // style={{ backgroundImage: "url('../../static/images/bg1.jpg')" }}  
+    // style={{ backgroundImage: "url('../../static/images/bg1.jpg')" }}  
     >
       <Element name="main">
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-md"></div>
-      </Element>
-      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl px-4 sm:px-6 h-full">
 
-        <h1 className="hero-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg leading-tight sm:leading-snug md:leading-snug mt-16 sm:mt-20 md:mt-24">
-          К нам приходят за Энергией, Красотой и Здоровьем
-        </h1>
-      </div>
-      
+
+        <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl px-4 sm:px-6 h-full">
+
+          <h1 className="hero-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg leading-tight sm:leading-snug md:leading-snug mt-16 sm:mt-20 md:mt-24">
+            Добро пожаловать в *waxing Hausa - место, где ваше здоровье и благополучие становятся нашим главным приоритетом.
+          </h1>
+        </div>
+      </Element>
     </section>
   );
 };
