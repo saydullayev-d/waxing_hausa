@@ -1,24 +1,49 @@
-// src/components/Hero.js
-import React from 'react';
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Header from "../Header/Header.js";
+import "./HeroSection.css"
+import { Element } from "react-scroll";
 
-function HeroSection() {
+gsap.registerPlugin(ScrollTrigger);
+
+const HeroSection = () => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".hero-text",
+      { opacity: 0, y: 50 },
+      { opacity: 1, y: 0, duration: 1.5, ease: "power3.out", delay: 0.5 }
+    );
+
+    gsap.to("#container", {
+      backgroundPosition: "center 10%",
+      scrollTrigger: {
+        trigger: "#container",
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, []);
+
   return (
-    <div className="flex-1 flex flex-col justify-center items-center text-center text-white px-4">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-none mb-8 tracking-tight">
-        ВАШЕ УЮТНОЕ<br />
-        МЕСТО ДЛЯ<br />
-        ПРЕОБРАЖЕНИЯ
-      </h1>
-      <div className="flex flex-col sm:flex-row gap-4">
-        <button className="bg-orange-500 text-white px-8 py-4 rounded-full text-sm md:text-base font-semibold hover:bg-orange-600 transition duration-300">
-          Записаться
-        </button>
-        <button className="bg-gray-900 text-white px-8 py-4 rounded-full text-sm md:text-base font-semibold hover:bg-gray-800 transition duration-300">
-          WhatsApp
-        </button>
+    <section
+      id="container"
+      className="hero-section relative h-screen w-full bg-cover bg-center flex flex-col justify-center items-center text-center text-white"
+      // style={{ backgroundImage: "url('../../static/images/bg1.jpg')" }}  
+    >
+      <Element name="main">
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-md"></div>
+      </Element>
+      <div className="relative z-10 flex flex-col items-center justify-center w-full max-w-4xl px-4 sm:px-6 h-full">
+
+        <h1 className="hero-text text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold drop-shadow-lg leading-tight sm:leading-snug md:leading-snug mt-16 sm:mt-20 md:mt-24">
+          К нам приходят за Энергией, Красотой и Здоровьем
+        </h1>
       </div>
-    </div>
+      
+    </section>
   );
-}
+};
 
 export default HeroSection;

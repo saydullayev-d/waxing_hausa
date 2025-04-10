@@ -1,0 +1,46 @@
+.hero-section {
+    background-image: url("../../static/images/bg1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяет элементы */
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .hero-text {
+    font-size: 3.5rem;
+    font-family: "Jost", serif;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    margin: auto 0; /* Центрирует заголовок */
+  }
+  
+  .hero-locations {
+    padding-bottom: 20px;
+  }
+  
+  
