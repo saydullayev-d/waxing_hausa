@@ -1,23 +1,33 @@
 .marquee {
-    display: flex;
-    width: 200%; /* Double width to allow seamless looping */
-    animation: marquee 20s linear infinite;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  white-space: nowrap; /* Текст не переносится на новую строку */
+  animation: marquee 20s linear infinite; /* 20s - скорость, можно настроить */
+  font-size: 1.25rem; /* Размер текста */
+  font-weight: 500; /* Средняя толщина шрифта */
+}
+
+/* Стили для span внутри marquee-content */
+.marquee-content span {
+  margin-right: 1.5rem; /* Отступ между сообщениями */
+}
+
+/* Анимация для бесконечного движения */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
   }
-  
-  .marquee-text {
-    white-space: nowrap; /* Prevents text from wrapping */
+  100% {
+    transform: translateX(-50%); /* Смещаем только на половину, так как контент дублируется */
   }
-  
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%); /* Moves half the width for seamless looping */
-    }
-  }
-  
-  /* Optional: Pause animation on hover */
-  .marquee:hover {
-    animation-play-state: paused;
-  }
+}
+
+/* Пауза при наведении (опционально) */
+.marquee:hover .marquee-content {
+  animation-play-state: paused;
+}

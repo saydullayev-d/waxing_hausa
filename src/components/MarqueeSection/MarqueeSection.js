@@ -2,19 +2,21 @@ import React from "react";
 import "./MarqueeSection.css";
 
 const MarqueeSection = () => {
+  // Определяем текст, который будет повторяться
+  const marqueeText = "СКИДКИ НА ПЕРВОЕ ПОСЕЩЕНИЕ";
+
   return (
-    <section className="w-full bg-gray-900 text-white py-4 overflow-hidden">
+    <section className="w-full bg-orange-600 text-white py-4 overflow-hidden">
       <div className="marquee">
         <div className="marquee-content">
-          <span>
-            Специальное предложение: скидка 20% на первую процедуру! Запишитесь сегодня и получите бонус! &nbsp;
-          </span>
-          <span>
-            Специальное предложение: скидка 20% на первую процедуру! Запишитесь сегодня и получите бонус! &nbsp;
-          </span>
-          <span>
-            Специальное предложение: скидка 20% на первую процедуру! Запишитесь сегодня и получите бонус! &nbsp;
-          </span>
+          {/* Повторяем текст несколько раз для плавного цикла */}
+          <span>{marqueeText}</span>
+          <span>{marqueeText}</span>
+          <span>{marqueeText}</span>
+          <span>{marqueeText}</span>
+          <span>{marqueeText}</span>
+          <span>{marqueeText}</span>
+
         </div>
       </div>
     </section>
