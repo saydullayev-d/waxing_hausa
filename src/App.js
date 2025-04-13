@@ -4,6 +4,7 @@ import Navbar from './components/Header/Header.js';
 import HeroSection from './components/HeroSection/HeroSection.js';
 import MarqueeSection from './components/MarqueeSection/MarqueeSection.js';
 import WelcomeSection from './components/WelcomeSection/WelcomeSection.js';
+import SplitSection from './components/SplitSection/SplitSection.js';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <HeroSection />
       <MarqueeSection />
       <WelcomeSection />
+      <SplitSection />
     </div>
   );
 }

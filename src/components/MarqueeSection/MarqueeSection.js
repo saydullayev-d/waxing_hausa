@@ -6,7 +6,7 @@ const MarqueeSection = () => {
   const marqueeText = "СКИДКИ НА ПЕРВОЕ ПОСЕЩЕНИЕ";
 
   return (
-    <section className="w-full bg-orange-600 text-white py-4 overflow-hidden">
+    <section className="w-full bg-pastel-green text-white py-4 overflow-hidden">
       <div className="marquee">
         <div className="marquee-content">
           {/* Повторяем текст несколько раз для плавного цикла */}

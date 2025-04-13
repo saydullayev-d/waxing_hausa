@@ -12,12 +12,12 @@ const WelcomeSection = () =>{
           </h1>
         </div>
 
-        <div className="mt-8 md:mt-0 md:w-1/2 flex justify-end"></div>
-        <div className="mt-8 w-full h-[80%] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
+        <div className="md:mt-0 md:w-1/2 flex justify-end"></div>
+        <div className="w-full h-[80%] max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
             <img 
                 src={WelcomeImg}
                 alt="Welcome img"
-                className="w-full h-auto object-cover rounded-lg shadow-md"            
+                className="w-full h-full object-cover rounded-lg shadow-md"            
             ></img>
         </div>
         </div>
