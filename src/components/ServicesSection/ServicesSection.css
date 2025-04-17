@@ -1,0 +1,32 @@
+/* Tailwind handles most styling, but we can add custom styles if needed */
+:root {
+    --custom-brown: #8B4513;
+  }
+  
+  .text-customBrown {
+    color: var(--custom-brown);
+  }
+  
+  .border-customBrown {
+    border-color: var(--custom-brown);
+  }
+  
+  /* Smooth transitions for modal */
+  .fixed.inset-0 {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .bg-white.rounded-xl {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effects for buttons */
+  button:hover, a:hover {
+    transform: translateY(-1px);
+  }
+  
+  /* Ensure images don't distort */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
