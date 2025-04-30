@@ -6,6 +6,7 @@ import MarqueeSection from './components/MarqueeSection/MarqueeSection.js';
 import WelcomeSection from './components/WelcomeSection/WelcomeSection.js';
 import SplitSection from './components/SplitSection/SplitSection.js';
 import ServicesSection from './components/ServicesSection/ServicesSection.js';
+import TeamSection from './components/ProfileSection/ProfileSection.js';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <WelcomeSection />
       <SplitSection />
       <ServicesSection />
+      <TeamSection />
     </div>
   );
 }
