@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
+import logo from "../../static/images/logo.png"
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,8 +36,8 @@ const Header = () => {
     >
       <div className="flex items-center mx-auto px-4">
         {/* Logo (left) */}
-        <a href="/" className="flex items-center text-white text-2xl md:text-4xl space-x-2">
-          <span className="font-bold">*waxing Hausa</span>
+        <a href="/" className="items-center space-x-2">
+          <img alt="logo" src={logo} className="h-20 w-auto object-cover"/>
         </a>
 
         {/* Navigation (center) */}
