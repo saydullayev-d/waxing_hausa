@@ -1,18 +1,11 @@
 import React from 'react';
 import PricingHeader from '../PricingHeader/PricingHeader';
 
-const HardwareCosmetology = () => {
+const BodyContouring = () => {
   const services = [
-    { name: 'Лицо INDIBA', price: '8000 драм' },
-    { name: 'Шея INDIBA', price: '6000 драм' },
-    { name: 'Лицо + шея INDIBA', price: '10000 драм' },
-    { name: 'Волосистая часть головы INDIBA', price: '10000 драм' },
-    { name: 'Плечи и руки INDIBA', price: '12000 драм' },
-    { name: 'Ягодицы и бедра INDIBA', price: '12000 драм' },
-    { name: 'Живот и талия INDIBA', price: '12000 драм' },
-    { name: 'Ноги полностью INDIBA', price: '12000 драм' },
-    { name: 'HIFU/SMAS лифтинг лица', price: '80000 драм' },
-    { name: 'Гидропилинг (HydraFacial)', price: 'Цена по запросу' },
+    { name: 'Массаж', price: 'Цена по запросу' },
+    { name: 'Обертывание', price: 'Цена по запросу' },
+    { name: 'Indiba', price: 'Цена по запросу' },
   ];
 
   return (
@@ -22,10 +15,10 @@ const HardwareCosmetology = () => {
       <section className="w-full bg-gradient-to-b from-gray-200 to-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            Аппаратная косметология
+            Коррекция фигуры
           </h1>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            Современные технологии для вашей красоты: процедуры Indiba, HIFU/SMAS-лифтинг и гидропилинг (HydraFacial) для омоложения и ухода.
+            Процедуры для моделирования фигуры: массаж, обертывания и технологии Indiba для вашего идеального силуэта.
           </p>
         </div>
       </section>
@@ -57,4 +50,4 @@ const HardwareCosmetology = () => {
   );
 };
 
-export default HardwareCosmetology;
+export default BodyContouring;
