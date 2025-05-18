@@ -3,11 +3,11 @@ import WelcomeImg from "../../static/images/welcome_img.jpg"
 
 const WelcomeSection = () =>{
     return(
-        <section className="text-black relative h-screen w-full bg-cover bg-center flex flex-col justify-center items-center text-center">
+        <section className="text-black relative h-screen w-full bg-cover bg-center flex flex-col justify-center items-center text-center mb-8">
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-4xl px-4 sm:px-6 h-full">
 
         <div className="flex flex-col items-center md:items-start text-center md:text-left md:w-1/2">
-          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg leading-relaxed sm:leading-relaxed md:leading-relaxed mt-14 sm:mt-16 md:mt-20">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold drop-shadow-lg leading-relaxed sm:leading-relaxed md:leading-relaxed mb-4 mt-8 sm:mt-10 md:mt-14">
             Добро пожаловать в наш мир красоты и гармонии!
           </h1>
         </div>
@@ -17,7 +17,7 @@ const WelcomeSection = () =>{
             <img 
                 src={WelcomeImg}
                 alt="Welcome img"
-                className="w-full h-full object-cover rounded-lg shadow-md"            
+                className="w-full h-full object-cover rounded-lg shadow-md "            
             ></img>
         </div>
         </div>

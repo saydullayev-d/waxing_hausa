@@ -52,7 +52,7 @@ const HeroSection = () => {
           className="bg-pastel-green text-white px-8 py-4 rounded-full font-semibold text-xl md:text-2xl hover:bg-gray-200 hover:text- gray-900 transition-colors duration-300 shadow-lg"
           onClick={() => alert("Button 2 clicked!")}
         >
-          Узнать больше
+          WhatsApp
         </button>
       </div>
       </Element>

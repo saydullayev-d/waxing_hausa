@@ -14,6 +14,11 @@ import SugaringWaxing from './components/SugaringWaxingSection/SugaringWaxing.js
 import Piercing from './components/PiercingSection/Piercing.js';
 import BodyContouring from './components/BodyContouringSection/BodyContouring.js';
 import ReviewsSection from './components/ReviewsSection/Reviews.js';
+import AddReview from './components/AddReviewsSection/AddReview.js';
+import QuestionSection from './components/QuestionSection/QuestionSection.js';
+import ContactSection from './components/ContactSection/ContactSection.js';
+import Footer from './components/Footer/Footer.js';
+import FooterUp from './components/FooterUp/FooterUp.js';
 
 // Главная страница со всеми секциями (без Navbar)
 const HomePage = () => (
@@ -26,6 +31,12 @@ const HomePage = () => (
     <ServicesSection />
     <TeamSection />
     <ReviewsSection />
+    <AddReview />
+    <QuestionSection />
+    <ContactSection />
+    <FooterUp />
+    {/* <Footer /> */}
+
   </div>
 );
 
