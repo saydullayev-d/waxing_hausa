@@ -9,7 +9,7 @@ import split6 from '../../static/images/split_6.jpg';
 
 // Компонент для рендеринга одного блока с изображением и текстом
 const SectionBlock = ({ item }) => (
-  <div className="relative w-full h-96 bg-gray-800 grayscale hover:grayscale-0 transition-all duration-300">
+  <div className="relative w-full h-96 bg-gray-800 grayscale-0 lg:grayscale md:grayscale hover:grayscale-0 transition-all duration-300">
     <img
       src={item.img}
       alt={item.text.title}
