@@ -31,7 +31,7 @@ const PricingHeader = () => {
 
   return (
     <header
-      className={`top-0 left-0 right-0 z-10 p-4 transition-colors duration-300 bg-gray-900 shadow-lg"
+      className={`top-0 left-0 right-0 z-10 p-4 transition-colors duration-300 bg-pastel-green shadow-lg"
         }`}
     >
       <div className="flex items-center mx-auto px-4">

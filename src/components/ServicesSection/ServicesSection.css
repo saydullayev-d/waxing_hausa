@@ -30,3 +30,13 @@
     max-width: 100%;
     height: auto;
   }
+
+  /* styles.css */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
