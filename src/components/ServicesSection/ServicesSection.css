@@ -31,12 +31,41 @@
     height: auto;
   }
 
-  /* styles.css */
+/* Скрытие ползунка */
 .scrollbar-hidden::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+  display: none;
 }
 
 .scrollbar-hidden {
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Анимация бесконечной карусели */
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-infinite-scroll {
+  animation: infinite-scroll 20s linear infinite;
+  display: flex;
+  width: calc(80vw * 9 + 4rem * 8); /* 3 карточки * 3 копии + отступы (space-x-4) */
+}
+
+/* Пауза анимации при наведении */
+.animate-infinite-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Отключение анимации на больших экранах */
+@media (min-width: 640px) {
+  .animate-infinite-scroll {
+    animation: none;
+    width: auto;
+  }
 }

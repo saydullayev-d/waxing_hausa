@@ -19,6 +19,7 @@ import QuestionSection from './components/QuestionSection/QuestionSection.js';
 import ContactSection from './components/ContactSection/ContactSection.js';
 import Footer from './components/Footer/Footer.js';
 import FooterUp from './components/FooterUp/FooterUp.js';
+import SwiperTest from './components/ServicesSection/SwiperTest.js';
 
 // Главная страница со всеми секциями (без Navbar)
 const HomePage = () => (
