@@ -1,6 +1,6 @@
 const AddReview = () => {
     return (
-        <div className="flex justify-center items-center mt-20">
+        <div className="flex justify-center items-center mt-20 px-4">
             <div className="text-center max-w-md">
                 <h1 className="text-5xl font-bold mb-6">УЖЕ БЫЛИ У НАС?</h1>
                 <p className="text-lg leading-relaxed mb-8">
