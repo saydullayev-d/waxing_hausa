@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import yandex_logo from '../../static/images/yandex_logo.png';
+import { Element } from "react-scroll";
 
 const reviews = [
   {
@@ -26,24 +27,26 @@ const reviews = [
 
 const RatingCard = () => {
   return (
-    <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 ">
-      <div className="flex-1 px-4">
-        <div className="flex items-center space-x-2">
-          <h1 className="text-6xl md:text-7xl font-bold text-gray-800">5.0</h1>
-          <div>
-            <span className="text-yellow-400 block">★★★★★</span>
-            <span className="text-gray-600 text-sm md:text-base">241 оценка</span>
+    <Element name="reviews">
+      <div className="bg-gray-100 p-4 rounded-lg flex items-center space-x-4 ">
+        <div className="flex-1 px-4">
+          <div className="flex items-center space-x-2">
+            <h1 className="text-6xl md:text-7xl font-bold text-gray-800">5.0</h1>
+            <div>
+              <span className="text-yellow-400 block">★★★★★</span>
+              <span className="text-gray-600 text-sm md:text-base">241 оценка</span>
+            </div>
+          </div>
+          <div className="mt-2 break-words flex items-center space-x-4 ">
+            <img src={yandex_logo} alt="Yandex Logo" className="w-10 h-10 md:w-12 md:h-12" />
+            <div>
+              <span className="text-red-500 text-base md:text-xl">Хорошее место</span>
+              <p className="text-gray-600 text-sm md:text-lg break-words">Любимые организации по оценкам и отзывам пользователей Яндекса</p>
+            </div>  
           </div>
         </div>
-        <div className="mt-2 break-words flex items-center space-x-4 ">
-          <img src={yandex_logo} alt="Yandex Logo" className="w-10 h-10 md:w-12 md:h-12" />
-          <div>
-            <span className="text-red-500 text-base md:text-xl">Хорошее место</span>
-            <p className="text-gray-600 text-sm md:text-lg break-words">Любимые организации по оценкам и отзывам пользователей Яндекса</p>
-          </div>  
-        </div>
       </div>
-    </div>
+    </Element>
   );
 };
 const ReviewCard = ({ review }) => {

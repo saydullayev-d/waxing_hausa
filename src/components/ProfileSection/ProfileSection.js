@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Element } from "react-scroll";
 import team_1 from '../../static/images/team/team_1.jpg';
 import team_2 from '../../static/images/team/team_2.jpg';
 import team_3 from '../../static/images/team/team_3.jpg';
@@ -21,16 +21,18 @@ const TeamMember = ({ name, role, imgSrc }) => {
 
 const TeamSection = () => {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 gap-4 py-16 bg-white w-[96%] mx-auto" style={{ minWidth: '320px' }}>
-      <TeamMember name="Карине Даниелян" role="Косметолог-эстетист" imgSrc={team_1} />
-      <TeamMember name="Сюзи Зограбян" role="Косметолог-эстетист" imgSrc={team_2} />
-      <TeamMember name="Марго Барсегян" role="Косметолог-эстетист" imgSrc={team_3} />
-      <TeamMember name="Марика Франгулян" role="Врач косметолог" imgSrc={team_4} />
-      <TeamMember name="Нона" role="Администратор" imgSrc={team_5} />
-      <TeamMember name="Нуне" role="Администратор" imgSrc={team_6} />
-      <TeamMember name="Диана" role="Администратор" imgSrc={team_7} />
-      <TeamMember name="Арус" role="Управляющая" imgSrc={team_8} />
-    </div>
+    <Element name="team">
+      <div className="grid grid-cols-2 lg:grid-cols-3 md:grid-cols-3 gap-4 py-16 bg-white w-[96%] mx-auto" style={{ minWidth: '320px' }}>
+        <TeamMember name="Карине Даниелян" role="Косметолог-эстетист" imgSrc={team_1} />
+        <TeamMember name="Сюзи Зограбян" role="Косметолог-эстетист" imgSrc={team_2} />
+        <TeamMember name="Марго Барсегян" role="Косметолог-эстетист" imgSrc={team_3} />
+        <TeamMember name="Марика Франгулян" role="Врач косметолог" imgSrc={team_4} />
+        <TeamMember name="Нона" role="Администратор" imgSrc={team_5} />
+        <TeamMember name="Нуне" role="Администратор" imgSrc={team_6} />
+        <TeamMember name="Диана" role="Администратор" imgSrc={team_7} />
+        <TeamMember name="Арус" role="Управляющая" imgSrc={team_8} />
+      </div>
+    </Element>
   );
 };
 

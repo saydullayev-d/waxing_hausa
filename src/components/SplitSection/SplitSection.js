@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Element } from "react-scroll";
 import split1 from '../../static/images/split_1.jpg';
 import split2 from '../../static/images/split_2.jpg';
 import split3 from '../../static/images/split_3.jpg';
@@ -83,18 +84,20 @@ const SplitSection = () => {
   ];
 
   return (
-    <div className="w-full">
-      {sections.map((section, index) => (
-        <div key={index} className="flex flex-col md:flex-row w-full">
-          <Link to={section.left.path} className="w-full md:w-1/2 block">
-            <SectionBlock item={section.left} />
-          </Link>
-          <Link to={section.right.path} className="w-full md:w-1/2 block">
-            <SectionBlock item={section.right} />
-          </Link>
-        </div>
-      ))}
-    </div>
+    <Element name="complexes">
+      <div className="w-full">
+        {sections.map((section, index) => (
+          <div key={index} className="flex flex-col md:flex-row w-full">
+            <Link to={section.left.path} className="w-full md:w-1/2 block">
+              <SectionBlock item={section.left} />
+            </Link>
+            <Link to={section.right.path} className="w-full md:w-1/2 block">
+              <SectionBlock item={section.right} />
+            </Link>
+          </div>
+        ))}
+      </div>
+    </Element>
   );
 };
 
