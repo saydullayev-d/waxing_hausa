@@ -5,11 +5,18 @@ const BodyContouring = () => {
   const [activeTab, setActiveTab] = useState('Массаж');
 
   const services = {
-    Массаж: [
+    'Массаж': [
+      { name: 'Массаж всего тела (60 минут)', price: '15000 драм' },
+      { name: 'Массаж ног (45 мин)', price: '12000 драм' },
+      { name: 'Антицеллюлитный массаж (60 минут)', price: '15000 драм' },
+      { name: 'Лимфодренажный массаж (60 минут)', price: '15000 драм' },
     ],
-    Обертывание: [
+    'Обертывание': [
+      { name: 'Комплексные программы коррекции фигуры обертывание', price: '17000 драм' },
     ],
-    Indiba: [
+    'Indiba': [
+      { name: 'Живот INDIBA.', price: '12000 драм' },
+      { name: 'Ноги одна зона INDIBA.', price: '12000 драм' },
     ],
   };
 
@@ -55,27 +62,21 @@ const BodyContouring = () => {
           </div>
 
           {/* Содержимое вкладок */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services[activeTab].map((service, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
-              >
-                <h3 className="text-xl font-medium text-gray-800 mb-4">
-                  {service.name}
-                </h3>
-                <div className="space-y-2">
-                  {Object.entries(service.packages).map(([pkg, price]) => (
-                    <div
-                      key={pkg}
-                      className="flex justify-between text-gray-600 text-lg"
-                    >
-                      <span>{pkg}</span>
-                      <span className="font-semibold">{price}</span>
-                    </div>
-                  ))}
+              <a href='https://n814803.alteg.io/company/765426/personal/menu?fbclid=PAZXh0bgNhZW0CMTEAAaaVeK8sKv279oyb24_0Yq_OnBGouIjrxDZgdIyDNMBit2kOIQG3-O4SoqU_aem_sMS38GfzFLccmmy6e0FB-w&o=' target='_blank'>
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
+                >
+                  <h3 className="text-xl font-medium text-gray-800 mb-2">
+                    {service.name}
+                  </h3>
+                  <p className="text-lg text-gray-600 font-semibold">
+                    {service.price}
+                  </p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>

@@ -14,7 +14,7 @@ L.Icon.Default.mergeOptions({
 });
 
 const ContactSection = () => {
-  const position = [40.18996141819542, 44.52052523286093]; // Coordinates for Koryun 21, Yerevan
+  const position = [40.18996141819542, 44.52052523286093];
 
   return (
     <Element name="contacts">

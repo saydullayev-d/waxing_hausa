@@ -6,6 +6,22 @@ const Piercing = () => {
 
   const tabs = ['Уши', 'Лицо', 'Тело'];
 
+  const services = {
+    'Уши': [
+      { name: 'Мочка катетер', price: '5000 драм' },
+    ],
+    'Лицо': [
+      { name: 'Нос', price: '21000 драм' },
+    ],
+    'Тело': [
+      { name: 'Трагус', price: '9000 драм' },
+      { name: 'Конч', price: '15000 драм' },
+      { name: 'Пупок', price: '22000 драм' },
+      { name: 'Хелмкс', price: '6000 драм' },
+
+    ],
+  };
+
   return (
     <div className="relative min-h-screen bg-gray-100 flex flex-col">
       <PricingHeader />
@@ -46,10 +62,22 @@ const Piercing = () => {
           </div>
 
           {/* Содержимое вкладок */}
-          <div className="text-center">
-            <p className="text-lg text-gray-600">
-              Цены и виды пирсинга уточняйте у наших специалистов.
-            </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services[activeTab].map((service, index) => (
+              <a href='https://n814803.alteg.io/company/765426/personal/menu?fbclid=PAZXh0bgNhZW0CMTEAAaaVeK8sKv279oyb24_0Yq_OnBGouIjrxDZgdIyDNMBit2kOIQG3-O4SoqU_aem_sMS38GfzFLccmmy6e0FB-w&o=' target='_blank'>
+                <div
+                  key={index}
+                  className="bg-gray-50 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
+                >
+                  <h3 className="text-xl font-medium text-gray-800 mb-2">
+                    {service.name}
+                  </h3>
+                  <p className="text-lg text-gray-600 font-semibold">
+                    {service.price}
+                  </p>
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       </section>
