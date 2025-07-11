@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import service_1 from "../../static/images/services/service_1.jpg";
@@ -7,50 +7,33 @@ import service_2 from "../../static/images/services/service_2.jpg";
 import service_3 from "../../static/images/services/service_3.jpg";
 
 const ServicesSection = () => {
-  const [selectedService, setSelectedService] = useState(null);
-
   const services = [
     {
       img: service_1,
       title: "Диодный лазер",
       desc: "ВСЕ ТЕЛО полностью + лицо",
       price: "12999 ДРАМ",
-      link: "#",
+      link: "https://widget.sonline.su/ru/services/?placeid=753797978",
     },
     {
       img: service_2,
       title: "Лифтинг без уколов с INDIBA!",
       desc: "* 6 сеансов",
       price: "60 000 ДРАМ",
-      link: "#",
+      link: "https://widget.sonline.su/ru/services/?placeid=753797978",
     },
     {
       img: service_3,
       title: "Шугаринг",
       desc: "Всего тело",
       price: "30000 ДРАМ",
-      link: "#",
+      link: "https://widget.sonline.su/ru/services/?placeid=753797978",
     },
   ];
 
-  const openModal = (service) => {
-    setSelectedService(service);
+  const handleServiceClick = (link) => {
+    window.open(link, "_blank");
   };
-
-  const closeModal = () => {
-    setSelectedService(null);
-  };
-
-  useEffect(() => {
-    if (selectedService) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [selectedService]);
 
   return (
     <Element name="services" className="py-16 bg-white">
@@ -74,7 +57,7 @@ const ServicesSection = () => {
               <SwiperSlide key={index}>
                 <div
                   className="bg-transparent p-6 rounded-xl transform transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col w-[80vw] max-w-[300px] h-[700px] mx-auto"
-                  onClick={() => openModal(service)}
+                  onClick={() => handleServiceClick(service.link)}
                 >
                   <div className="overflow-hidden rounded-lg h-[500px] flex items-center justify-center">
                     <img
@@ -108,7 +91,7 @@ const ServicesSection = () => {
             <div
               key={index}
               className="bg-transparent p-6 rounded-xl transform transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col h-[700px]"
-              onClick={() => openModal(service)}
+              onClick={() => handleServiceClick(service.link)}
             >
               <div className="overflow-hidden rounded-lg h-[500px] flex items-center justify-center">
                 <img
@@ -134,32 +117,6 @@ const ServicesSection = () => {
           ))}
         </div>
       </div>
-
-      {/* Modal */}
-      {selectedService && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 py-15 overflow-x-hidden">
-          <div className="bg-white rounded-xl w-full max-w-xl mx-4 relative h-[90%] overflow-y-auto">
-            <button
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
-              onClick={closeModal}
-            >
-              ✕
-            </button>
-            <div className="w-full h-[90%] flex items-center justify-center py-6">
-              <img
-                src={selectedService.img}
-                alt={selectedService.title}
-                className="w-auto h-full object-contain rounded-t-xl"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-2xl font-bold text-gray-800 mb-2">{selectedService.title}</h3>
-              <p className="text-xl font-semibold text-gray-800 mb-2">{selectedService.price}</p>
-              <p className="text-gray-600 mb-2">{selectedService.desc}</p>
-            </div>
-          </div>
-        </div>
-      )}
     </Element>
   );
 };

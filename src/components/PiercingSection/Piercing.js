@@ -64,7 +64,7 @@ const Piercing = () => {
           {/* Содержимое вкладок */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services[activeTab].map((service, index) => (
-              <a href='https://n814803.alteg.io/company/765426/personal/menu?fbclid=PAZXh0bgNhZW0CMTEAAaaVeK8sKv279oyb24_0Yq_OnBGouIjrxDZgdIyDNMBit2kOIQG3-O4SoqU_aem_sMS38GfzFLccmmy6e0FB-w&o=' target='_blank'>
+              <a href='https://widget.sonline.su/ru/services/?placeid=753797978' target='_blank'>
                 <div
                   key={index}
                   className="bg-gray-50 rounded-lg shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
