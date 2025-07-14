@@ -27,7 +27,7 @@ const TeamSection = () => {
         <TeamMember name="Сюзи Зограбян" role="Косметолог-эстетист" imgSrc={team_2} />
         <TeamMember name="Марго Барсегян" role="Косметолог-эстетист" imgSrc={team_3} />
         <TeamMember name="Марика Франгулян" role="Врач косметолог" imgSrc={team_4} />
-        <TeamMember name="Нона" role="Администратор" imgSrc={team_5} />
+        <TeamMember name="Нонна" role="Администратор" imgSrc={team_5} />
         <TeamMember name="Нуне" role="Администратор" imgSrc={team_6} />
         <TeamMember name="Диана" role="Администратор" imgSrc={team_7} />
         <TeamMember name="Арус" role="Управляющая" imgSrc={team_8} />

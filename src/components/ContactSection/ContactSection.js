@@ -27,10 +27,14 @@ const ContactSection = () => {
           Без выходных <br /> и перерывов
         </p>
         <div className="flex space-x-4 mb-8">
-          <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+          <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+            onClick={() => window.open('https://www.instagram.com/waxing_house_yerevan?igsh=MTU0cTVnb3ZwM2ticg==', '_blank')}
+            >
             <FaInstagram className="text-xl" />
           </button>
-          <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100">
+          <button className="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100"
+            onClick={() => window.open('https://wa.me/37455829082', '_blank')}
+            >
             <FaWhatsapp className="text-xl" />
           </button>
         </div>
